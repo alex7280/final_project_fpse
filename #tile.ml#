@@ -1,0 +1,62 @@
+type kind = Man | Pin | Suo | Dragon | Wind
+
+type number = int
+
+type fulu = bool
+
+type tile = {
+    kind;
+    number;
+    fulu;
+}
+
+let print_tile (to_print:tile):() = 
+  match to_print.kind with
+    | Man -> print_string("Man"^^to_print.number)
+    | Pin -> print_string("Pin"^^to_print.number)
+    | Suo -> print_string("Suo"^^to_print.number)
+    | Dragon -> (match to_print.number with
+                   | 1 -> print_string("Bai")
+                   | 2 -> print_string("Chong")
+                   | 3 -> print_string("Fa")
+                )
+    | Wind -> (match to_print.number with 
+                 | 1 -> print_string("Tong")
+                 | 2 -> print_string("Nan")
+                 | 3 -> print_string("Xia")
+                 | 4 -> print_string("Pei")
+              )
+let print_tile_list (to_print: tile list) = 
+  List.iter to_print ~f:(fun x -> print_tile x)
+
+let check_equal (first:tile) (second:tile) = 
+  
+
+
+(*let sort_hand( l: tile list):tile list = 
+  *)
+
+let find_tui (l:tile list) (to_set:tile):tile option = 
+  let exist_tui = ref false in
+  let () = List.iter l ~f:( fun x -> if check_equal x to_set then exist_tui := true) in
+  match !exist_tui with
+    | false -> None
+    | 
+
+(*check quad tuples*)
+let check_kang ( l: tile list) (to_set:tile):tile option = 
+
+  
+let find_shun (l:tile list) (to_set:tile): bool = 
+  
+
+
+let find_ke (l:tile list) (to_set:tile):bool = 
+  let exist_ke = ref false in
+  let 
+  let exist_tui = ref false in 
+  let () = List.iter l ~f:( fun x -> (match !exist_tui with
+                                      | false -> if check_equal x to_set then exist_tui := true)
+                                      | true -> if check_equal 
+
+
