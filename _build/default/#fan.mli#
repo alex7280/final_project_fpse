@@ -1,0 +1,17 @@
+
+
+
+module type fan = sig 
+  (*each of the functions in fan takes in a list of tiles, which are represented as strings and to check if the hand satisfies the requirements of this fan. There are many, many of fans but a couple of examples are given,along with the requirements of this fan. But to win, the check_satisfy must pass first.*)
+
+  (* this checks if the 14 tiles satisfy: 4 sets of ke-zi and 1 set of que-tou*)
+  val check_satisfy: String list -> bool
+  (* no zi-pai, no 1/9 wan,suo,pin*)
+  val tan_yao : String list -> bool
+  (* every pai is wan/suo/pin*)
+  val chin_yisu : String list -> bool
+  (* every pai is wan/suo/pin or zi pai*)
+  val hun_yisu : String list -> bool
+  (* every pai is zi pai*)
+  val zi_yisu : String list -> bool
+end

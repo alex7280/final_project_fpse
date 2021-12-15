@@ -1,0 +1,16 @@
+(library
+   (name tile)
+   (modules tile)
+   (libraries
+     core)
+   (preprocess (pps ppx_jane bisect_ppx))
+)
+
+(library 
+  (name player)
+  (modules player)
+  (libraries 
+    core
+    tile)
+  (preprocess (pps ppx_jane bisect_ppx))
+)

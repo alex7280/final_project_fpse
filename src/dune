@@ -1,0 +1,45 @@
+(library
+   (name tile)
+   (modules tile)
+   (libraries
+     core)
+   (preprocess (pps ppx_jane bisect_ppx))
+)
+
+(library
+  (name action)
+  (modules action)
+  (libraries
+     core
+     tile)
+  (preprocess (pps bisect_ppx))
+)
+
+(library 
+  (name player)
+  (modules player)
+  (libraries 
+    core
+    tile)
+  (preprocess (pps ppx_jane bisect_ppx))
+)
+
+
+(library
+   (name game)
+   (modules game)
+   (libraries
+      core
+      tile
+      player
+      action
+      )
+)
+
+(executable 
+   (name terminal)
+   (modules terminal)
+   (libraries
+      game
+   )
+)
