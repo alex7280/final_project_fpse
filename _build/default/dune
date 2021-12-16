@@ -9,6 +9,8 @@
       src/terminal.ml
       test/tests.ml
       test/dune
+      dune
+      dune-project
       )
       (action
         (run zip -R project.zip %{deps})))     

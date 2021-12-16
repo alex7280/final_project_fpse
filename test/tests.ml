@@ -196,8 +196,7 @@ let test_check_ron _ =
   let tile6 = T.class_constructor 0 Man 3 false false false in
   let tile7 = T.class_constructor 0 Man 7 false false false in
   let tile8 = T.class_constructor 0 Man 7 false false false in 
-  let (ron_tf,this) = P.check_ron [tile1;tile2;tile3;tile4;tile5;tile6;tile7;tile8] in
-  P.print_ron_info_list this;
+  let (ron_tf,_) = P.check_ron [tile1;tile2;tile3;tile4;tile5;tile6;tile7;tile8] in
   assert_equal ron_tf true;
 
   let tile81 = T.class_constructor 0 Man 1 false false false in
@@ -208,8 +207,7 @@ let test_check_ron _ =
   let tile86 = T.class_constructor 0 Man 3 false false false in
   let tile87 = T.class_constructor 0 Man 4 false false false in
   let tile88 = T.class_constructor 0 Man 4 false false false in
-  let (eron_tf,ethis) = P.check_ron [tile81;tile82;tile83;tile84;tile85;tile86;tile87;tile88] in
-  P.print_ron_info_list ethis; 
+  let (eron_tf,_) = P.check_ron [tile81;tile82;tile83;tile84;tile85;tile86;tile87;tile88] in
   assert_equal eron_tf true;
 
 
@@ -260,7 +258,6 @@ let get_num_test _ =
 
 let generate_game_tiles_test _ = 
   let t1 = T.generate_game_tiles () in 
-  print_endline( string_of_int (List.length t1));
   assert_equal (List.length t1) 136
 
 let check_tiles_test _ =
