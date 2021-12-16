@@ -1,0 +1,5 @@
+lib: [
+  "_build/install/default/lib/two_people_mahjong/META"
+  "_build/install/default/lib/two_people_mahjong/dune-package"
+  "_build/install/default/lib/two_people_mahjong/opam"
+]

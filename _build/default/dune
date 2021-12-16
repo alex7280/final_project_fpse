@@ -4,6 +4,9 @@
       src/tile.ml
       src/player.ml
       src/dune
+      src/action.ml
+      src/game.ml
+      src/terminal.ml
       test/tests.ml
       test/dune
       )

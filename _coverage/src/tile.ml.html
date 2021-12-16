@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="../coverage.css" />
+    <script src="../highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        <a href="../index.html">
+          <span class="dirname">src/</span>tile.ml
+        </a>
+      </h1>
+      <h2>89.64%</h2>
+    </div>
+    <div id="navbar">
+      <span class="unvisited" style="top:1.05%"></span>
+      <span class="unvisited" style="top:8.19%"></span>
+      <span class="unvisited" style="top:11.97%"></span>
+      <span class="unvisited" style="top:24.16%"></span>
+      <span class="unvisited" style="top:26.26%"></span>
+      <span class="some-visited" style="top:27.52%"></span>
+      <span class="some-visited" style="top:27.73%"></span>
+      <span class="some-visited" style="top:29.83%"></span>
+      <span class="some-visited" style="top:30.25%"></span>
+      <span class="some-visited" style="top:32.77%"></span>
+      <span class="unvisited" style="top:47.69%"></span>
+      <span class="unvisited" style="top:48.74%"></span>
+      <span class="unvisited" style="top:49.58%"></span>
+      <span class="some-visited" style="bottom:49.58%"></span>
+      <span class="unvisited" style="bottom:48.53%"></span>
+      <span class="unvisited" style="bottom:47.06%"></span>
+      <span class="some-visited" style="bottom:42.44%"></span>
+      <span class="some-visited" style="bottom:41.81%"></span>
+      <span class="unvisited" style="bottom:41.18%"></span>
+      <span class="unvisited" style="bottom:36.76%"></span>
+      <span class="unvisited" style="bottom:36.55%"></span>
+      <span class="unvisited" style="bottom:36.34%"></span>
+      <span class="some-visited" style="bottom:34.03%"></span>
+      <span class="unvisited" style="bottom:31.93%"></span>
+      <span class="unvisited" style="bottom:18.28%"></span>
+      <span class="unvisited" style="bottom:18.07%"></span>
+      <span class="unvisited" style="bottom:17.86%"></span>
+      <span class="unvisited" style="bottom:17.02%"></span>
+      <span class="some-visited" style="bottom:15.13%"></span>
+    </div>
+    <div id="report">
+      <div id="lines-layer">
+        <pre>
+<a id="L1"></a><span class="visited"> </span>
+<a id="L2"></a><span > </span>
+<a id="L3"></a><span > </span>
+<a id="L4"></a><span > </span>
+<a id="L5"></a><span class="unvisited"> </span>
+<a id="L6"></a><span > </span>
+<a id="L7"></a><span > </span>
+<a id="L8"></a><span > </span>
+<a id="L9"></a><span > </span>
+<a id="L10"></a><span > </span>
+<a id="L11"></a><span > </span>
+<a id="L12"></a><span > </span>
+<a id="L13"></a><span > </span>
+<a id="L14"></a><span > </span>
+<a id="L15"></a><span > </span>
+<a id="L16"></a><span > </span>
+<a id="L17"></a><span > </span>
+<a id="L18"></a><span class="visited"> </span>
+<a id="L19"></a><span > </span>
+<a id="L20"></a><span > </span>
+<a id="L21"></a><span > </span>
+<a id="L22"></a><span > </span>
+<a id="L23"></a><span > </span>
+<a id="L24"></a><span > </span>
+<a id="L25"></a><span > </span>
+<a id="L26"></a><span > </span>
+<a id="L27"></a><span class="visited"> </span>
+<a id="L28"></a><span > </span>
+<a id="L29"></a><span > </span>
+<a id="L30"></a><span > </span>
+<a id="L31"></a><span > </span>
+<a id="L32"></a><span > </span>
+<a id="L33"></a><span > </span>
+<a id="L34"></a><span > </span>
+<a id="L35"></a><span > </span>
+<a id="L36"></a><span > </span>
+<a id="L37"></a><span > </span>
+<a id="L38"></a><span > </span>
+<a id="L39"></a><span class="unvisited"> </span>
+<a id="L40"></a><span > </span>
+<a id="L41"></a><span > </span>
+<a id="L42"></a><span > </span>
+<a id="L43"></a><span class="visited"> </span>
+<a id="L44"></a><span > </span>
+<a id="L45"></a><span > </span>
+<a id="L46"></a><span class="visited"> </span>
+<a id="L47"></a><span > </span>
+<a id="L48"></a><span > </span>
+<a id="L49"></a><span class="visited"> </span>
+<a id="L50"></a><span > </span>
+<a id="L51"></a><span > </span>
+<a id="L52"></a><span > </span>
+<a id="L53"></a><span > </span>
+<a id="L54"></a><span class="visited"> </span>
+<a id="L55"></a><span > </span>
+<a id="L56"></a><span > </span>
+<a id="L57"></a><span class="unvisited"> </span>
+<a id="L58"></a><span > </span>
+<a id="L59"></a><span > </span>
+<a id="L60"></a><span class="visited"> </span>
+<a id="L61"></a><span > </span>
+<a id="L62"></a><span > </span>
+<a id="L63"></a><span class="visited"> </span>
+<a id="L64"></a><span > </span>
+<a id="L65"></a><span > </span>
+<a id="L66"></a><span class="visited"> </span>
+<a id="L67"></a><span > </span>
+<a id="L68"></a><span class="visited"> </span>
+<a id="L69"></a><span class="visited"> </span>
+<a id="L70"></a><span class="visited"> </span>
+<a id="L71"></a><span class="visited"> </span>
+<a id="L72"></a><span class="visited"> </span>
+<a id="L73"></a><span > </span>
+<a id="L74"></a><span class="visited"> </span>
+<a id="L75"></a><span class="visited"> </span>
+<a id="L76"></a><span class="visited"> </span>
+<a id="L77"></a><span class="visited"> </span>
+<a id="L78"></a><span class="visited"> </span>
+<a id="L79"></a><span class="visited"> </span>
+<a id="L80"></a><span > </span>
+<a id="L81"></a><span class="visited"> </span>
+<a id="L82"></a><span class="visited"> </span>
+<a id="L83"></a><span class="visited"> </span>
+<a id="L84"></a><span class="visited"> </span>
+<a id="L85"></a><span class="visited"> </span>
+<a id="L86"></a><span class="visited"> </span>
+<a id="L87"></a><span > </span>
+<a id="L88"></a><span class="visited"> </span>
+<a id="L89"></a><span class="visited"> </span>
+<a id="L90"></a><span class="visited"> </span>
+<a id="L91"></a><span class="visited"> </span>
+<a id="L92"></a><span class="visited"> </span>
+<a id="L93"></a><span class="visited"> </span>
+<a id="L94"></a><span > </span>
+<a id="L95"></a><span class="visited"> </span>
+<a id="L96"></a><span class="visited"> </span>
+<a id="L97"></a><span class="visited"> </span>
+<a id="L98"></a><span class="visited"> </span>
+<a id="L99"></a><span class="visited"> </span>
+<a id="L100"></a><span class="visited"> </span>
+<a id="L101"></a><span > </span>
+<a id="L102"></a><span > </span>
+<a id="L103"></a><span > </span>
+<a id="L104"></a><span class="visited"> </span>
+<a id="L105"></a><span > </span>
+<a id="L106"></a><span > </span>
+<a id="L107"></a><span class="visited"> </span>
+<a id="L108"></a><span class="visited"> </span>
+<a id="L109"></a><span class="visited"> </span>
+<a id="L110"></a><span class="visited"> </span>
+<a id="L111"></a><span > </span>
+<a id="L112"></a><span > </span>
+<a id="L113"></a><span class="visited"> </span>
+<a id="L114"></a><span class="visited"> </span>
+<a id="L115"></a><span class="unvisited"> </span>
+<a id="L116"></a><span class="visited"> </span>
+<a id="L117"></a><span class="visited"> </span>
+<a id="L118"></a><span class="visited"> </span>
+<a id="L119"></a><span class="visited"> </span>
+<a id="L120"></a><span > </span>
+<a id="L121"></a><span > </span>
+<a id="L122"></a><span class="visited"> </span>
+<a id="L123"></a><span class="visited"> </span>
+<a id="L124"></a><span class="visited"> </span>
+<a id="L125"></a><span class="unvisited"> </span>
+<a id="L126"></a><span > </span>
+<a id="L127"></a><span > </span>
+<a id="L128"></a><span class="visited"> </span>
+<a id="L129"></a><span class="visited"> </span>
+<a id="L130"></a><span class="visited"> </span>
+<a id="L131"></a><span class="some-visited"> </span>
+<a id="L132"></a><span class="some-visited"> </span>
+<a id="L133"></a><span class="visited"> </span>
+<a id="L134"></a><span class="visited"> </span>
+<a id="L135"></a><span > </span>
+<a id="L136"></a><span > </span>
+<a id="L137"></a><span > </span>
+<a id="L138"></a><span > </span>
+<a id="L139"></a><span class="visited"> </span>
+<a id="L140"></a><span class="visited"> </span>
+<a id="L141"></a><span class="visited"> </span>
+<a id="L142"></a><span class="some-visited"> </span>
+<a id="L143"></a><span class="visited"> </span>
+<a id="L144"></a><span class="some-visited"> </span>
+<a id="L145"></a><span class="visited"> </span>
+<a id="L146"></a><span class="visited"> </span>
+<a id="L147"></a><span > </span>
+<a id="L148"></a><span > </span>
+<a id="L149"></a><span class="visited"> </span>
+<a id="L150"></a><span > </span>
+<a id="L151"></a><span > </span>
+<a id="L152"></a><span > </span>
+<a id="L153"></a><span class="visited"> </span>
+<a id="L154"></a><span > </span>
+<a id="L155"></a><span > </span>
+<a id="L156"></a><span class="some-visited"> </span>
+<a id="L157"></a><span > </span>
+<a id="L158"></a><span > </span>
+<a id="L159"></a><span class="visited"> </span>
+<a id="L160"></a><span > </span>
+<a id="L161"></a><span > </span>
+<a id="L162"></a><span > </span>
+<a id="L163"></a><span > </span>
+<a id="L164"></a><span > </span>
+<a id="L165"></a><span > </span>
+<a id="L166"></a><span > </span>
+<a id="L167"></a><span > </span>
+<a id="L168"></a><span > </span>
+<a id="L169"></a><span > </span>
+<a id="L170"></a><span > </span>
+<a id="L171"></a><span > </span>
+<a id="L172"></a><span > </span>
+<a id="L173"></a><span > </span>
+<a id="L174"></a><span > </span>
+<a id="L175"></a><span > </span>
+<a id="L176"></a><span > </span>
+<a id="L177"></a><span > </span>
+<a id="L178"></a><span > </span>
+<a id="L179"></a><span > </span>
+<a id="L180"></a><span > </span>
+<a id="L181"></a><span > </span>
+<a id="L182"></a><span > </span>
+<a id="L183"></a><span > </span>
+<a id="L184"></a><span > </span>
+<a id="L185"></a><span > </span>
+<a id="L186"></a><span > </span>
+<a id="L187"></a><span > </span>
+<a id="L188"></a><span > </span>
+<a id="L189"></a><span > </span>
+<a id="L190"></a><span > </span>
+<a id="L191"></a><span > </span>
+<a id="L192"></a><span > </span>
+<a id="L193"></a><span > </span>
+<a id="L194"></a><span > </span>
+<a id="L195"></a><span > </span>
+<a id="L196"></a><span > </span>
+<a id="L197"></a><span > </span>
+<a id="L198"></a><span > </span>
+<a id="L199"></a><span > </span>
+<a id="L200"></a><span > </span>
+<a id="L201"></a><span > </span>
+<a id="L202"></a><span > </span>
+<a id="L203"></a><span > </span>
+<a id="L204"></a><span > </span>
+<a id="L205"></a><span > </span>
+<a id="L206"></a><span > </span>
+<a id="L207"></a><span > </span>
+<a id="L208"></a><span > </span>
+<a id="L209"></a><span > </span>
+<a id="L210"></a><span > </span>
+<a id="L211"></a><span > </span>
+<a id="L212"></a><span > </span>
+<a id="L213"></a><span > </span>
+<a id="L214"></a><span > </span>
+<a id="L215"></a><span > </span>
+<a id="L216"></a><span > </span>
+<a id="L217"></a><span > </span>
+<a id="L218"></a><span > </span>
+<a id="L219"></a><span > </span>
+<a id="L220"></a><span > </span>
+<a id="L221"></a><span > </span>
+<a id="L222"></a><span > </span>
+<a id="L223"></a><span > </span>
+<a id="L224"></a><span > </span>
+<a id="L225"></a><span > </span>
+<a id="L226"></a><span class="visited"> </span>
+<a id="L227"></a><span class="unvisited"> </span>
+<a id="L228"></a><span > </span>
+<a id="L229"></a><span > </span>
+<a id="L230"></a><span > </span>
+<a id="L231"></a><span class="visited"> </span>
+<a id="L232"></a><span class="unvisited"> </span>
+<a id="L233"></a><span class="visited"> </span>
+<a id="L234"></a><span class="visited"> </span>
+<a id="L235"></a><span class="visited"> </span>
+<a id="L236"></a><span class="unvisited"> </span>
+<a id="L237"></a><span class="visited"> </span>
+<a id="L238"></a><span > </span>
+<a id="L239"></a><span > </span>
+<a id="L240"></a><span class="some-visited"> </span>
+<a id="L241"></a><span class="visited"> </span>
+<a id="L242"></a><span > </span>
+<a id="L243"></a><span class="visited"> </span>
+<a id="L244"></a><span class="visited"> </span>
+<a id="L245"></a><span class="unvisited"> </span>
+<a id="L246"></a><span > </span>
+<a id="L247"></a><span > </span>
+<a id="L248"></a><span > </span>
+<a id="L249"></a><span > </span>
+<a id="L250"></a><span class="visited"> </span>
+<a id="L251"></a><span class="visited"> </span>
+<a id="L252"></a><span class="unvisited"> </span>
+<a id="L253"></a><span class="visited"> </span>
+<a id="L254"></a><span > </span>
+<a id="L255"></a><span > </span>
+<a id="L256"></a><span > </span>
+<a id="L257"></a><span class="visited"> </span>
+<a id="L258"></a><span class="visited"> </span>
+<a id="L259"></a><span > </span>
+<a id="L260"></a><span > </span>
+<a id="L261"></a><span > </span>
+<a id="L262"></a><span > </span>
+<a id="L263"></a><span class="visited"> </span>
+<a id="L264"></a><span class="visited"> </span>
+<a id="L265"></a><span class="visited"> </span>
+<a id="L266"></a><span > </span>
+<a id="L267"></a><span > </span>
+<a id="L268"></a><span > </span>
+<a id="L269"></a><span class="visited"> </span>
+<a id="L270"></a><span class="visited"> </span>
+<a id="L271"></a><span > </span>
+<a id="L272"></a><span > </span>
+<a id="L273"></a><span > </span>
+<a id="L274"></a><span class="some-visited"> </span>
+<a id="L275"></a><span class="visited"> </span>
+<a id="L276"></a><span class="visited"> </span>
+<a id="L277"></a><span class="some-visited"> </span>
+<a id="L278"></a><span class="visited"> </span>
+<a id="L279"></a><span class="visited"> </span>
+<a id="L280"></a><span class="unvisited"> </span>
+<a id="L281"></a><span > </span>
+<a id="L282"></a><span > </span>
+<a id="L283"></a><span > </span>
+<a id="L284"></a><span class="visited"> </span>
+<a id="L285"></a><span class="visited"> </span>
+<a id="L286"></a><span > </span>
+<a id="L287"></a><span > </span>
+<a id="L288"></a><span class="visited"> </span>
+<a id="L289"></a><span class="visited"> </span>
+<a id="L290"></a><span class="visited"> </span>
+<a id="L291"></a><span class="visited"> </span>
+<a id="L292"></a><span class="visited"> </span>
+<a id="L293"></a><span class="visited"> </span>
+<a id="L294"></a><span > </span>
+<a id="L295"></a><span > </span>
+<a id="L296"></a><span class="visited"> </span>
+<a id="L297"></a><span class="visited"> </span>
+<a id="L298"></a><span class="visited"> </span>
+<a id="L299"></a><span > </span>
+<a id="L300"></a><span > </span>
+<a id="L301"></a><span class="unvisited"> </span>
+<a id="L302"></a><span class="unvisited"> </span>
+<a id="L303"></a><span class="unvisited"> </span>
+<a id="L304"></a><span > </span>
+<a id="L305"></a><span > </span>
+<a id="L306"></a><span > </span>
+<a id="L307"></a><span > </span>
+<a id="L308"></a><span class="visited"> </span>
+<a id="L309"></a><span > </span>
+<a id="L310"></a><span > </span>
+<a id="L311"></a><span > </span>
+<a id="L312"></a><span class="visited"> </span>
+<a id="L313"></a><span class="visited"> </span>
+<a id="L314"></a><span class="some-visited"> </span>
+<a id="L315"></a><span > </span>
+<a id="L316"></a><span > </span>
+<a id="L317"></a><span > </span>
+<a id="L318"></a><span class="visited"> </span>
+<a id="L319"></a><span class="visited"> </span>
+<a id="L320"></a><span > </span>
+<a id="L321"></a><span > </span>
+<a id="L322"></a><span > </span>
+<a id="L323"></a><span class="visited"> </span>
+<a id="L324"></a><span class="unvisited"> </span>
+<a id="L325"></a><span class="visited"> </span>
+<a id="L326"></a><span > </span>
+<a id="L327"></a><span class="visited"> </span>
+<a id="L328"></a><span class="visited"> </span>
+<a id="L329"></a><span > </span>
+<a id="L330"></a><span > </span>
+<a id="L331"></a><span > </span>
+<a id="L332"></a><span > </span>
+<a id="L333"></a><span class="visited"> </span>
+<a id="L334"></a><span class="visited"> </span>
+<a id="L335"></a><span class="visited"> </span>
+<a id="L336"></a><span class="visited"> </span>
+<a id="L337"></a><span > </span>
+<a id="L338"></a><span > </span>
+<a id="L339"></a><span > </span>
+<a id="L340"></a><span class="visited"> </span>
+<a id="L341"></a><span class="visited"> </span>
+<a id="L342"></a><span class="visited"> </span>
+<a id="L343"></a><span class="visited"> </span>
+<a id="L344"></a><span class="visited"> </span>
+<a id="L345"></a><span class="visited"> </span>
+<a id="L346"></a><span class="visited"> </span>
+<a id="L347"></a><span class="visited"> </span>
+<a id="L348"></a><span class="visited"> </span>
+<a id="L349"></a><span > </span>
+<a id="L350"></a><span > </span>
+<a id="L351"></a><span class="visited"> </span>
+<a id="L352"></a><span class="visited"> </span>
+<a id="L353"></a><span class="visited"> </span>
+<a id="L354"></a><span > </span>
+<a id="L355"></a><span > </span>
+<a id="L356"></a><span class="visited"> </span>
+<a id="L357"></a><span class="visited"> </span>
+<a id="L358"></a><span class="visited"> </span>
+<a id="L359"></a><span class="visited"> </span>
+<a id="L360"></a><span > </span>
+<a id="L361"></a><span > </span>
+<a id="L362"></a><span > </span>
+<a id="L363"></a><span > </span>
+<a id="L364"></a><span > </span>
+<a id="L365"></a><span > </span>
+<a id="L366"></a><span > </span>
+<a id="L367"></a><span > </span>
+<a id="L368"></a><span > </span>
+<a id="L369"></a><span > </span>
+<a id="L370"></a><span > </span>
+<a id="L371"></a><span > </span>
+<a id="L372"></a><span > </span>
+<a id="L373"></a><span > </span>
+<a id="L374"></a><span > </span>
+<a id="L375"></a><span > </span>
+<a id="L376"></a><span > </span>
+<a id="L377"></a><span class="visited"> </span>
+<a id="L378"></a><span class="visited"> </span>
+<a id="L379"></a><span class="visited"> </span>
+<a id="L380"></a><span class="visited"> </span>
+<a id="L381"></a><span > </span>
+<a id="L382"></a><span > </span>
+<a id="L383"></a><span class="visited"> </span>
+<a id="L384"></a><span class="visited"> </span>
+<a id="L385"></a><span class="visited"> </span>
+<a id="L386"></a><span class="visited"> </span>
+<a id="L387"></a><span > </span>
+<a id="L388"></a><span > </span>
+<a id="L389"></a><span class="unvisited"> </span>
+<a id="L390"></a><span class="unvisited"> </span>
+<a id="L391"></a><span class="unvisited"> </span>
+<a id="L392"></a><span > </span>
+<a id="L393"></a><span > </span>
+<a id="L394"></a><span class="visited"> </span>
+<a id="L395"></a><span class="unvisited"> </span>
+<a id="L396"></a><span class="visited"> </span>
+<a id="L397"></a><span > </span>
+<a id="L398"></a><span > </span>
+<a id="L399"></a><span class="visited"> </span>
+<a id="L400"></a><span class="visited"> </span>
+<a id="L401"></a><span > </span>
+<a id="L402"></a><span > </span>
+<a id="L403"></a><span > </span>
+<a id="L404"></a><span class="some-visited"> </span>
+<a id="L405"></a><span class="visited"> </span>
+<a id="L406"></a><span class="visited"> </span>
+<a id="L407"></a><span class="visited"> </span>
+<a id="L408"></a><span class="visited"> </span>
+<a id="L409"></a><span class="visited"> </span>
+<a id="L410"></a><span class="visited"> </span>
+<a id="L411"></a><span class="visited"> </span>
+<a id="L412"></a><span class="visited"> </span>
+<a id="L413"></a><span class="visited"> </span>
+<a id="L414"></a><span > </span>
+<a id="L415"></a><span > </span>
+<a id="L416"></a><span > </span>
+<a id="L417"></a><span class="visited"> </span>
+<a id="L418"></a><span > </span>
+<a id="L419"></a><span > </span>
+<a id="L420"></a><span class="visited"> </span>
+<a id="L421"></a><span class="visited"> </span>
+<a id="L422"></a><span class="visited"> </span>
+<a id="L423"></a><span > </span>
+<a id="L424"></a><span class="visited"> </span>
+<a id="L425"></a><span class="visited"> </span>
+<a id="L426"></a><span class="visited"> </span>
+<a id="L427"></a><span > </span>
+<a id="L428"></a><span class="visited"> </span>
+<a id="L429"></a><span class="visited"> </span>
+<a id="L430"></a><span class="visited"> </span>
+<a id="L431"></a><span > </span>
+<a id="L432"></a><span class="visited"> </span>
+<a id="L433"></a><span > </span>
+<a id="L434"></a><span > </span>
+<a id="L435"></a><span class="visited"> </span>
+<a id="L436"></a><span > </span>
+<a id="L437"></a><span > </span>
+<a id="L438"></a><span > </span>
+<a id="L439"></a><span class="visited"> </span>
+<a id="L440"></a><span > </span>
+<a id="L441"></a><span class="visited"> </span>
+<a id="L442"></a><span class="visited"> </span>
+<a id="L443"></a><span class="visited"> </span>
+<a id="L444"></a><span > </span>
+<a id="L445"></a><span > </span>
+<a id="L446"></a><span > </span>
+<a id="L447"></a><span class="visited"> </span>
+<a id="L448"></a><span class="visited"> </span>
+<a id="L449"></a><span class="visited"> </span>
+<a id="L450"></a><span class="visited"> </span>
+<a id="L451"></a><span > </span>
+<a id="L452"></a><span > </span>
+<a id="L453"></a><span > </span>
+<a id="L454"></a><span class="visited"> </span>
+<a id="L455"></a><span class="visited"> </span>
+<a id="L456"></a><span class="visited"> </span>
+<a id="L457"></a><span > </span>
+<a id="L458"></a><span > </span>
+<a id="L459"></a><span > </span>
+<a id="L460"></a><span class="visited"> </span>
+<a id="L461"></a><span class="visited"> </span>
+<a id="L462"></a><span class="visited"> </span>
+<a id="L463"></a><span class="visited"> </span>
+<a id="L464"></a><span class="visited"> </span>
+<a id="L465"></a><span class="visited"> </span>
+<a id="L466"></a><span > </span>
+<a id="L467"></a><span > </span>
+<a id="L468"></a><span > </span>
+<a id="L469"></a><span > </span>
+<a id="L470"></a><span > </span>
+<a id="L471"></a><span class="visited"> </span>
+<a id="L472"></a><span class="visited"> </span>
+<a id="L473"></a><span class="visited"> </span>
+<a id="L474"></a><span > </span>
+<a id="L475"></a><span class="visited"> </span>
+<a id="L476"></a><span > </span>
+</pre>
+      </div>
+      <div id="text-layer">
+        <pre id="line-numbers">
+<a href="#L1">  1</a>
+<a href="#L2">  2</a>
+<a href="#L3">  3</a>
+<a href="#L4">  4</a>
+<a href="#L5">  5</a>
+<a href="#L6">  6</a>
+<a href="#L7">  7</a>
+<a href="#L8">  8</a>
+<a href="#L9">  9</a>
+<a href="#L10"> 10</a>
+<a href="#L11"> 11</a>
+<a href="#L12"> 12</a>
+<a href="#L13"> 13</a>
+<a href="#L14"> 14</a>
+<a href="#L15"> 15</a>
+<a href="#L16"> 16</a>
+<a href="#L17"> 17</a>
+<a href="#L18"> 18</a>
+<a href="#L19"> 19</a>
+<a href="#L20"> 20</a>
+<a href="#L21"> 21</a>
+<a href="#L22"> 22</a>
+<a href="#L23"> 23</a>
+<a href="#L24"> 24</a>
+<a href="#L25"> 25</a>
+<a href="#L26"> 26</a>
+<a href="#L27"> 27</a>
+<a href="#L28"> 28</a>
+<a href="#L29"> 29</a>
+<a href="#L30"> 30</a>
+<a href="#L31"> 31</a>
+<a href="#L32"> 32</a>
+<a href="#L33"> 33</a>
+<a href="#L34"> 34</a>
+<a href="#L35"> 35</a>
+<a href="#L36"> 36</a>
+<a href="#L37"> 37</a>
+<a href="#L38"> 38</a>
+<a href="#L39"> 39</a>
+<a href="#L40"> 40</a>
+<a href="#L41"> 41</a>
+<a href="#L42"> 42</a>
+<a href="#L43"> 43</a>
+<a href="#L44"> 44</a>
+<a href="#L45"> 45</a>
+<a href="#L46"> 46</a>
+<a href="#L47"> 47</a>
+<a href="#L48"> 48</a>
+<a href="#L49"> 49</a>
+<a href="#L50"> 50</a>
+<a href="#L51"> 51</a>
+<a href="#L52"> 52</a>
+<a href="#L53"> 53</a>
+<a href="#L54"> 54</a>
+<a href="#L55"> 55</a>
+<a href="#L56"> 56</a>
+<a href="#L57"> 57</a>
+<a href="#L58"> 58</a>
+<a href="#L59"> 59</a>
+<a href="#L60"> 60</a>
+<a href="#L61"> 61</a>
+<a href="#L62"> 62</a>
+<a href="#L63"> 63</a>
+<a href="#L64"> 64</a>
+<a href="#L65"> 65</a>
+<a href="#L66"> 66</a>
+<a href="#L67"> 67</a>
+<a href="#L68"> 68</a>
+<a href="#L69"> 69</a>
+<a href="#L70"> 70</a>
+<a href="#L71"> 71</a>
+<a href="#L72"> 72</a>
+<a href="#L73"> 73</a>
+<a href="#L74"> 74</a>
+<a href="#L75"> 75</a>
+<a href="#L76"> 76</a>
+<a href="#L77"> 77</a>
+<a href="#L78"> 78</a>
+<a href="#L79"> 79</a>
+<a href="#L80"> 80</a>
+<a href="#L81"> 81</a>
+<a href="#L82"> 82</a>
+<a href="#L83"> 83</a>
+<a href="#L84"> 84</a>
+<a href="#L85"> 85</a>
+<a href="#L86"> 86</a>
+<a href="#L87"> 87</a>
+<a href="#L88"> 88</a>
+<a href="#L89"> 89</a>
+<a href="#L90"> 90</a>
+<a href="#L91"> 91</a>
+<a href="#L92"> 92</a>
+<a href="#L93"> 93</a>
+<a href="#L94"> 94</a>
+<a href="#L95"> 95</a>
+<a href="#L96"> 96</a>
+<a href="#L97"> 97</a>
+<a href="#L98"> 98</a>
+<a href="#L99"> 99</a>
+<a href="#L100">100</a>
+<a href="#L101">101</a>
+<a href="#L102">102</a>
+<a href="#L103">103</a>
+<a href="#L104">104</a>
+<a href="#L105">105</a>
+<a href="#L106">106</a>
+<a href="#L107">107</a>
+<a href="#L108">108</a>
+<a href="#L109">109</a>
+<a href="#L110">110</a>
+<a href="#L111">111</a>
+<a href="#L112">112</a>
+<a href="#L113">113</a>
+<a href="#L114">114</a>
+<a href="#L115">115</a>
+<a href="#L116">116</a>
+<a href="#L117">117</a>
+<a href="#L118">118</a>
+<a href="#L119">119</a>
+<a href="#L120">120</a>
+<a href="#L121">121</a>
+<a href="#L122">122</a>
+<a href="#L123">123</a>
+<a href="#L124">124</a>
+<a href="#L125">125</a>
+<a href="#L126">126</a>
+<a href="#L127">127</a>
+<a href="#L128">128</a>
+<a href="#L129">129</a>
+<a href="#L130">130</a>
+<a href="#L131">131</a>
+<a href="#L132">132</a>
+<a href="#L133">133</a>
+<a href="#L134">134</a>
+<a href="#L135">135</a>
+<a href="#L136">136</a>
+<a href="#L137">137</a>
+<a href="#L138">138</a>
+<a href="#L139">139</a>
+<a href="#L140">140</a>
+<a href="#L141">141</a>
+<a href="#L142">142</a>
+<a href="#L143">143</a>
+<a href="#L144">144</a>
+<a href="#L145">145</a>
+<a href="#L146">146</a>
+<a href="#L147">147</a>
+<a href="#L148">148</a>
+<a href="#L149">149</a>
+<a href="#L150">150</a>
+<a href="#L151">151</a>
+<a href="#L152">152</a>
+<a href="#L153">153</a>
+<a href="#L154">154</a>
+<a href="#L155">155</a>
+<a href="#L156">156</a>
+<a href="#L157">157</a>
+<a href="#L158">158</a>
+<a href="#L159">159</a>
+<a href="#L160">160</a>
+<a href="#L161">161</a>
+<a href="#L162">162</a>
+<a href="#L163">163</a>
+<a href="#L164">164</a>
+<a href="#L165">165</a>
+<a href="#L166">166</a>
+<a href="#L167">167</a>
+<a href="#L168">168</a>
+<a href="#L169">169</a>
+<a href="#L170">170</a>
+<a href="#L171">171</a>
+<a href="#L172">172</a>
+<a href="#L173">173</a>
+<a href="#L174">174</a>
+<a href="#L175">175</a>
+<a href="#L176">176</a>
+<a href="#L177">177</a>
+<a href="#L178">178</a>
+<a href="#L179">179</a>
+<a href="#L180">180</a>
+<a href="#L181">181</a>
+<a href="#L182">182</a>
+<a href="#L183">183</a>
+<a href="#L184">184</a>
+<a href="#L185">185</a>
+<a href="#L186">186</a>
+<a href="#L187">187</a>
+<a href="#L188">188</a>
+<a href="#L189">189</a>
+<a href="#L190">190</a>
+<a href="#L191">191</a>
+<a href="#L192">192</a>
+<a href="#L193">193</a>
+<a href="#L194">194</a>
+<a href="#L195">195</a>
+<a href="#L196">196</a>
+<a href="#L197">197</a>
+<a href="#L198">198</a>
+<a href="#L199">199</a>
+<a href="#L200">200</a>
+<a href="#L201">201</a>
+<a href="#L202">202</a>
+<a href="#L203">203</a>
+<a href="#L204">204</a>
+<a href="#L205">205</a>
+<a href="#L206">206</a>
+<a href="#L207">207</a>
+<a href="#L208">208</a>
+<a href="#L209">209</a>
+<a href="#L210">210</a>
+<a href="#L211">211</a>
+<a href="#L212">212</a>
+<a href="#L213">213</a>
+<a href="#L214">214</a>
+<a href="#L215">215</a>
+<a href="#L216">216</a>
+<a href="#L217">217</a>
+<a href="#L218">218</a>
+<a href="#L219">219</a>
+<a href="#L220">220</a>
+<a href="#L221">221</a>
+<a href="#L222">222</a>
+<a href="#L223">223</a>
+<a href="#L224">224</a>
+<a href="#L225">225</a>
+<a href="#L226">226</a>
+<a href="#L227">227</a>
+<a href="#L228">228</a>
+<a href="#L229">229</a>
+<a href="#L230">230</a>
+<a href="#L231">231</a>
+<a href="#L232">232</a>
+<a href="#L233">233</a>
+<a href="#L234">234</a>
+<a href="#L235">235</a>
+<a href="#L236">236</a>
+<a href="#L237">237</a>
+<a href="#L238">238</a>
+<a href="#L239">239</a>
+<a href="#L240">240</a>
+<a href="#L241">241</a>
+<a href="#L242">242</a>
+<a href="#L243">243</a>
+<a href="#L244">244</a>
+<a href="#L245">245</a>
+<a href="#L246">246</a>
+<a href="#L247">247</a>
+<a href="#L248">248</a>
+<a href="#L249">249</a>
+<a href="#L250">250</a>
+<a href="#L251">251</a>
+<a href="#L252">252</a>
+<a href="#L253">253</a>
+<a href="#L254">254</a>
+<a href="#L255">255</a>
+<a href="#L256">256</a>
+<a href="#L257">257</a>
+<a href="#L258">258</a>
+<a href="#L259">259</a>
+<a href="#L260">260</a>
+<a href="#L261">261</a>
+<a href="#L262">262</a>
+<a href="#L263">263</a>
+<a href="#L264">264</a>
+<a href="#L265">265</a>
+<a href="#L266">266</a>
+<a href="#L267">267</a>
+<a href="#L268">268</a>
+<a href="#L269">269</a>
+<a href="#L270">270</a>
+<a href="#L271">271</a>
+<a href="#L272">272</a>
+<a href="#L273">273</a>
+<a href="#L274">274</a>
+<a href="#L275">275</a>
+<a href="#L276">276</a>
+<a href="#L277">277</a>
+<a href="#L278">278</a>
+<a href="#L279">279</a>
+<a href="#L280">280</a>
+<a href="#L281">281</a>
+<a href="#L282">282</a>
+<a href="#L283">283</a>
+<a href="#L284">284</a>
+<a href="#L285">285</a>
+<a href="#L286">286</a>
+<a href="#L287">287</a>
+<a href="#L288">288</a>
+<a href="#L289">289</a>
+<a href="#L290">290</a>
+<a href="#L291">291</a>
+<a href="#L292">292</a>
+<a href="#L293">293</a>
+<a href="#L294">294</a>
+<a href="#L295">295</a>
+<a href="#L296">296</a>
+<a href="#L297">297</a>
+<a href="#L298">298</a>
+<a href="#L299">299</a>
+<a href="#L300">300</a>
+<a href="#L301">301</a>
+<a href="#L302">302</a>
+<a href="#L303">303</a>
+<a href="#L304">304</a>
+<a href="#L305">305</a>
+<a href="#L306">306</a>
+<a href="#L307">307</a>
+<a href="#L308">308</a>
+<a href="#L309">309</a>
+<a href="#L310">310</a>
+<a href="#L311">311</a>
+<a href="#L312">312</a>
+<a href="#L313">313</a>
+<a href="#L314">314</a>
+<a href="#L315">315</a>
+<a href="#L316">316</a>
+<a href="#L317">317</a>
+<a href="#L318">318</a>
+<a href="#L319">319</a>
+<a href="#L320">320</a>
+<a href="#L321">321</a>
+<a href="#L322">322</a>
+<a href="#L323">323</a>
+<a href="#L324">324</a>
+<a href="#L325">325</a>
+<a href="#L326">326</a>
+<a href="#L327">327</a>
+<a href="#L328">328</a>
+<a href="#L329">329</a>
+<a href="#L330">330</a>
+<a href="#L331">331</a>
+<a href="#L332">332</a>
+<a href="#L333">333</a>
+<a href="#L334">334</a>
+<a href="#L335">335</a>
+<a href="#L336">336</a>
+<a href="#L337">337</a>
+<a href="#L338">338</a>
+<a href="#L339">339</a>
+<a href="#L340">340</a>
+<a href="#L341">341</a>
+<a href="#L342">342</a>
+<a href="#L343">343</a>
+<a href="#L344">344</a>
+<a href="#L345">345</a>
+<a href="#L346">346</a>
+<a href="#L347">347</a>
+<a href="#L348">348</a>
+<a href="#L349">349</a>
+<a href="#L350">350</a>
+<a href="#L351">351</a>
+<a href="#L352">352</a>
+<a href="#L353">353</a>
+<a href="#L354">354</a>
+<a href="#L355">355</a>
+<a href="#L356">356</a>
+<a href="#L357">357</a>
+<a href="#L358">358</a>
+<a href="#L359">359</a>
+<a href="#L360">360</a>
+<a href="#L361">361</a>
+<a href="#L362">362</a>
+<a href="#L363">363</a>
+<a href="#L364">364</a>
+<a href="#L365">365</a>
+<a href="#L366">366</a>
+<a href="#L367">367</a>
+<a href="#L368">368</a>
+<a href="#L369">369</a>
+<a href="#L370">370</a>
+<a href="#L371">371</a>
+<a href="#L372">372</a>
+<a href="#L373">373</a>
+<a href="#L374">374</a>
+<a href="#L375">375</a>
+<a href="#L376">376</a>
+<a href="#L377">377</a>
+<a href="#L378">378</a>
+<a href="#L379">379</a>
+<a href="#L380">380</a>
+<a href="#L381">381</a>
+<a href="#L382">382</a>
+<a href="#L383">383</a>
+<a href="#L384">384</a>
+<a href="#L385">385</a>
+<a href="#L386">386</a>
+<a href="#L387">387</a>
+<a href="#L388">388</a>
+<a href="#L389">389</a>
+<a href="#L390">390</a>
+<a href="#L391">391</a>
+<a href="#L392">392</a>
+<a href="#L393">393</a>
+<a href="#L394">394</a>
+<a href="#L395">395</a>
+<a href="#L396">396</a>
+<a href="#L397">397</a>
+<a href="#L398">398</a>
+<a href="#L399">399</a>
+<a href="#L400">400</a>
+<a href="#L401">401</a>
+<a href="#L402">402</a>
+<a href="#L403">403</a>
+<a href="#L404">404</a>
+<a href="#L405">405</a>
+<a href="#L406">406</a>
+<a href="#L407">407</a>
+<a href="#L408">408</a>
+<a href="#L409">409</a>
+<a href="#L410">410</a>
+<a href="#L411">411</a>
+<a href="#L412">412</a>
+<a href="#L413">413</a>
+<a href="#L414">414</a>
+<a href="#L415">415</a>
+<a href="#L416">416</a>
+<a href="#L417">417</a>
+<a href="#L418">418</a>
+<a href="#L419">419</a>
+<a href="#L420">420</a>
+<a href="#L421">421</a>
+<a href="#L422">422</a>
+<a href="#L423">423</a>
+<a href="#L424">424</a>
+<a href="#L425">425</a>
+<a href="#L426">426</a>
+<a href="#L427">427</a>
+<a href="#L428">428</a>
+<a href="#L429">429</a>
+<a href="#L430">430</a>
+<a href="#L431">431</a>
+<a href="#L432">432</a>
+<a href="#L433">433</a>
+<a href="#L434">434</a>
+<a href="#L435">435</a>
+<a href="#L436">436</a>
+<a href="#L437">437</a>
+<a href="#L438">438</a>
+<a href="#L439">439</a>
+<a href="#L440">440</a>
+<a href="#L441">441</a>
+<a href="#L442">442</a>
+<a href="#L443">443</a>
+<a href="#L444">444</a>
+<a href="#L445">445</a>
+<a href="#L446">446</a>
+<a href="#L447">447</a>
+<a href="#L448">448</a>
+<a href="#L449">449</a>
+<a href="#L450">450</a>
+<a href="#L451">451</a>
+<a href="#L452">452</a>
+<a href="#L453">453</a>
+<a href="#L454">454</a>
+<a href="#L455">455</a>
+<a href="#L456">456</a>
+<a href="#L457">457</a>
+<a href="#L458">458</a>
+<a href="#L459">459</a>
+<a href="#L460">460</a>
+<a href="#L461">461</a>
+<a href="#L462">462</a>
+<a href="#L463">463</a>
+<a href="#L464">464</a>
+<a href="#L465">465</a>
+<a href="#L466">466</a>
+<a href="#L467">467</a>
+<a href="#L468">468</a>
+<a href="#L469">469</a>
+<a href="#L470">470</a>
+<a href="#L471">471</a>
+<a href="#L472">472</a>
+<a href="#L473">473</a>
+<a href="#L474">474</a>
+<a href="#L475">475</a>
+<a href="#L476">476</a>
+</pre>
+<pre><code class="ocaml">open Core;;
+
+
+(*five kind of tiles*)
+<span data-count="0">t</span>ype kind = Man | Pin | Suo | Dragon | Wind [@@deriving equal]
+
+type tile = {
+    id : int;
+    kind : kind;
+    number : int;
+    (* indicates if this tile is chii, pong or kang*)
+    mutable fulu : bool;
+    (*indicate if this tile is played*)
+    mutable discarded : bool;
+    mutable dora : bool;
+}
+
+let class_constructor (i:int) (k:kind) (num:int) (f:bool) (d:bool) (dora:bool)= <span data-count="1478">{</span>
+    id = i;
+    kind = k;
+    number = num;
+    fulu = f;
+    discarded = d;
+    dora = dora
+}
+
+let construct_fake (k:kind) (num:int) = <span data-count="1375">{</span>
+    id = 0;
+    kind = k;
+    number = num;
+    fulu = false;
+    discarded = false;
+    dora = false;
+  }
+
+type t = tile
+
+let get_kind (t:tile) = 
+  <span data-count="0">t</span>.kind
+
+
+let get_fulu (t:tile) = 
+  <span data-count="26">t</span>.fulu
+
+let get_number (t:tile) = 
+  <span data-count="1">t</span>.number
+
+let get_discarded (t:tile) = 
+  <span data-count="1">t</span>.discarded
+
+
+
+let change_fulu (to_change:tile) = 
+  <span data-count="7">t</span>o_change.fulu &lt;- true
+
+let set_nonfulu (to_change:tile) = 
+  <span data-count="0">t</span>o_change.fulu &lt;- false
+
+let change_discarded (to_change:tile) = 
+  <span data-count="1">t</span>o_change.discarded &lt;- true
+
+let kind_equal (k1: kind) (k2:kind) = 
+  <span data-count="1">e</span>qual_kind k1 k2
+
+let generate_game_tiles _ = 
+  <span data-count="10">l</span>et id_gen = ref 1 in 
+  let generated_man_tiles = List.fold [1;2;3;4;5;6;7;8;9] ~init:[] 
+                              ~f:(fun acc x -&gt; <span data-count="90">l</span>et t = class_constructor !id_gen Man x false false false in 
+                                               <span data-count="90">l</span>et t1 = class_constructor (!id_gen+1) Man x false false false in
+                                               <span data-count="90">l</span>et t2 = class_constructor (!id_gen+2) Man x false false false in
+                                               <span data-count="90">l</span>et t3 = class_constructor (!id_gen+3) Man x false false false in
+                                               <span data-count="90">i</span>d_gen := !id_gen + 4;
+                                          acc @[t;t1;t2;t3]) in 
+  <span data-count="10">l</span>et generated_pin_tiles = List.fold [1;2;3;4;5;6;7;8;9] ~init:generated_man_tiles 
+                          ~f:(fun acc x -&gt; <span data-count="90">l</span>et t = class_constructor !id_gen Pin x false false false in
+                                               <span data-count="90">l</span>et t1 = class_constructor (!id_gen+1) Pin x false false false in
+                                               <span data-count="90">l</span>et t2 = class_constructor (!id_gen+2) Pin x false false false in
+                                               <span data-count="90">l</span>et t3 = class_constructor (!id_gen+3) Pin x false false false in
+                                               <span data-count="90">i</span>d_gen := !id_gen + 4;
+                                          acc @[t;t1;t2;t3]) in 
+  <span data-count="10">l</span>et generated_suo_tiles = List.fold [1;2;3;4;5;6;7;8;9] ~init:generated_pin_tiles
+                          ~f:(fun acc x -&gt; <span data-count="90">l</span>et t = class_constructor !id_gen Suo x false false false in
+                                               <span data-count="90">l</span>et t1 = class_constructor (!id_gen+1) Suo x false false false in
+                                               <span data-count="90">l</span>et t2 = class_constructor (!id_gen+2) Suo x false false false in
+                                               <span data-count="90">l</span>et t3 = class_constructor (!id_gen+3) Suo x false false false in
+                                               <span data-count="90">i</span>d_gen := !id_gen + 4;
+                                          acc @[t;t1;t2;t3]) in
+  <span data-count="10">l</span>et generated_wind_tiles = List.fold [1;2;3;4] ~init:generated_suo_tiles 
+                           ~f:(fun acc x-&gt; <span data-count="40">l</span>et t = class_constructor !id_gen Wind x false false false in
+                                               <span data-count="40">l</span>et t1 = class_constructor (!id_gen+1) Wind x false false false in
+                                               <span data-count="40">l</span>et t2 = class_constructor (!id_gen+2) Wind x false false false in
+                                               <span data-count="40">l</span>et t3 = class_constructor (!id_gen+3) Wind x false false false in
+                                               <span data-count="40">i</span>d_gen := !id_gen + 4;
+                                          acc @[t;t1;t2;t3]) in
+  <span data-count="10">L</span>ist.fold [1;2;3] ~init:generated_wind_tiles
+    ~f:(fun acc x-&gt; <span data-count="30">l</span>et t = class_constructor !id_gen Dragon x false false false in
+                    <span data-count="30">l</span>et t1 = class_constructor (!id_gen+1) Dragon x false false false in
+                    <span data-count="30">l</span>et t2 = class_constructor (!id_gen+2) Dragon x false false false in
+                    <span data-count="30">l</span>et t3 = class_constructor (!id_gen+3) Dragon x false false false in
+                    <span data-count="30">i</span>d_gen := !id_gen + 4;
+                    acc @[t;t1;t2;t3])
+
+let check_pin_suo_man (k_list : kind list) = 
+  <span data-count="75">l</span>et man_exist = ref false in 
+  let pin_exist = ref false in
+  let suo_exist = ref false in 
+  List.iter k_list ~f:(fun x -&gt; <span data-count="225">i</span>f equal_kind x Man then <span data-count="90">m</span>an_exist := true
+                                else <span data-count="135">i</span>f equal_kind x Pin then <span data-count="57">p</span>in_exist := true
+                                else <span data-count="78">i</span>f equal_kind x Suo then <span data-count="54">s</span>uo_exist := true);
+  <span data-count="75">!</span>man_exist &amp;&amp; <span data-count="69">!</span>pin_exist &amp;&amp; <span data-count="54">!</span>suo_exist
+
+let check_laotou (to_check:tile) = 
+  <span data-count="78">m</span>atch to_check.kind with 
+  | <span data-count="20">D</span>ragon -&gt; false
+  | <span data-count="0">W</span>ind -&gt; false
+  | <span data-count="58">_</span> -&gt; (match to_check.number with 
+          | <span data-count="34">1</span> -&gt; true
+          | <span data-count="4">9</span> -&gt; true
+          | <span data-count="20">_</span> -&gt; false
+         )
+let is_wind_dragon (to_check:tile) = 
+  <span data-count="2">m</span>atch to_check.kind with 
+  | <span data-count="1">D</span>ragon -&gt; true
+  | <span data-count="1">W</span>ind -&gt; true
+  | <span data-count="0">_</span> -&gt; false 
+
+let is_green_tile (to_check: tile) = 
+  <span data-count="67">m</span>atch to_check.kind with 
+  | <span data-count="20">D</span>ragon -&gt; if to_check.number = 3 then <span data-count="8">t</span>rue
+              else <span data-count="12">f</span>alse
+  | <span data-count="12">S</span>uo -&gt; if (to_check.number = 2<span data-count="3">)</span> || (to_check.number = 3<span data-count="0">)</span> || (to_check.number = 4 <span data-count="3">)</span> || (to_check.number = 6<span data-count="0">)</span> 
+            || (to_check.number = 8<span data-count="0">)</span> then <span data-count="6">t</span>rue 
+           else <span data-count="6">f</span>alse
+  | <span data-count="35">_</span> -&gt; false 
+
+
+(*check the tile does not belong to wind/dragon/ has number 1 or 9*)
+let check_non_yao (to_check:tile) = 
+  <span data-count="126">m</span>atch to_check.kind with
+  | <span data-count="60">M</span>an -&gt; if not (to_check.number = 1) &amp;&amp; <span data-count="42">n</span>ot (to_check.number = 9) then <span data-count="42">t</span>rue
+           else <span data-count="18">f</span>alse
+  | <span data-count="15">P</span>in -&gt; if not (to_check.number = 1) &amp;&amp; <span data-count="4">n</span>ot (to_check.number = 9) then <span data-count="0">t</span>rue
+           else <span data-count="15">f</span>alse
+  | <span data-count="6">S</span>uo -&gt; if not (to_check.number = 1) &amp;&amp; <span data-count="0">n</span>ot (to_check.number = 9) then <span data-count="0">t</span>rue
+           else <span data-count="6">f</span>alse
+  | <span data-count="45">_</span> -&gt; false
+
+let check_yao (to_check:tile) = 
+  <span data-count="71">n</span>ot (check_non_ya<span data-count="71">o</span> to_check)
+
+(*check  a list contains lao tou tile*)
+let contain_lao_tou_list (to_check:tile list ) = 
+  <span data-count="18">L</span>ist.fold to_check ~init:false ~f:(fun acc x -&gt; <span data-count="50">c</span>heck_laoto<span data-count="50">u</span> <span data-count="22">x</span> || ac<span data-count="12">c</span>)
+
+let contain_non_yao_list (to_check:tile list) = 
+  <span data-count="2">L</span>ist.fold to_check ~init:false ~f:(fun acc x -&gt; <span data-count="6">c</span>heck_non_ya<span data-count="6">o</span> <span data-count="4">x</span> || ac<span data-count="0">c</span>)
+
+let contain_yao_list (to_check:tile list) = 
+  <span data-count="24">L</span>ist.fold to_check ~init:false ~f:(fun acc x -&gt; <span data-count="70">c</span>heck_ya<span data-count="70">o</span> <span data-count="56">x</span> || ac<span data-count="2">c</span>)
+
+[@@@coverage off]
+(*string rep of tiles*)
+let tile_to_string (to_print:tile):string = 
+  match to_print.kind with
+    | Man -&gt; "Man"^(string_of_int to_print.number)
+    | Pin -&gt; "Pin"^(string_of_int to_print.number)
+    | Suo -&gt; "Suo"^(string_of_int to_print.number)
+    | Dragon -&gt; (match to_print.number with
+                   | 1 -&gt; "Bai / Dragon 1"
+                   | 2 -&gt; "Chong / Dragon 2"
+                   | 3 -&gt; "Fa / Dragon 3"
+                   | _ -&gt; "impossible"
+                )
+    | Wind -&gt; (match to_print.number with 
+                 | 1 -&gt; "Tong / Wind 1"
+                 | 2 -&gt; "Nan / Wind 2"
+                 | 3 -&gt; "Xia / Wind 3"
+                 | 4 -&gt; "Pei / Wind 4"
+                 | _ -&gt; "impossible"
+              )
+
+let tile_list_to_string (to_print: tile list): string = 
+  List.fold to_print ~init:"" ~f:(fun acc x -&gt; let string_rep = tile_to_string x in 
+                                  String.concat [acc;" ";string_rep])
+
+let tile_list_list_to_string ( to_print: tile list list) : string = 
+  List.fold to_print ~init:"" ~f:(fun acc x -&gt; let string_rep = tile_list_to_string x in
+                                  String.concat [acc;" ";string_rep])
+
+
+
+let print_tile (to_print:tile) =
+  match to_print.kind with
+    | Man -&gt; print_string("Man"^(string_of_int to_print.number) ^ "   ")
+    | Pin -&gt; print_string("Pin"^(string_of_int to_print.number) ^ "   ")
+    | Suo -&gt; print_string("Suo"^(string_of_int to_print.number) ^ "   ")
+    | Dragon -&gt; (match to_print.number with
+                   | 1 -&gt; print_string("Bai / Dragon 1"^ "   ")
+                   | 2 -&gt; print_string("Chong / Dragon 2"^ "   ")
+                   | 3 -&gt; print_string("Fa / Dragon 3"^ "   ")
+                   | _ -&gt; print_string("impossible")
+                )
+    | Wind -&gt; (match to_print.number with
+                 | 1 -&gt; print_string("Tong / Wind 1"^ "   ")
+                 | 2 -&gt; print_string("Nan / Wind 2"^ "   ")
+                 | 3 -&gt; print_string("Xia / Wind 3"^ "   ")
+                 | 4 -&gt; print_string("Pei / Wind 4"^ "   ")
+                 | _ -&gt; print_string("impossible")
+              )
+
+(*print out a list of tiles*)
+let print_tile_list (to_print: tile list) = 
+  List.iter ~f:(fun x -&gt; 
+                                      print_tile x) to_print
+
+
+let print_tile_list_list ( to_print: tile list list ) : unit=
+  let num = ref 1 in
+  List.iter to_print ~f:(fun x -&gt; print_string (string_of_int !num^ "\n");
+                                  print_tile_list x;
+                                  print_string("\n\n");
+                                  num := !num + 1) 
+[@@@coverage on]
+(*check if three tiles all have same kind*)
+let same_kind (first:tile) (second:tile) (third:tile):bool =
+  <span data-count="1">i</span>f (equal_kin<span data-count="1">d</span> first.kind second.kind) &amp;&amp; (<span data-count="1">e</span>qual_kin<span data-count="1">d</span> first.kind third.kind) then <span data-count="1">t</span>rue
+  else <span data-count="0">f</span>alse
+
+(*check if a list of list of Tiles have the same type .*)
+let same_kind_across_shun(shun_list: tile list list) = 
+  <span data-count="5">m</span>atch shun_list with 
+  | <span data-count="0">[</span>] -&gt; true
+  | <span data-count="5">x</span>::xs -&gt; if List.lengt<span data-count="5">h</span> xs &gt; 0 then 
+             <span data-count="3">(</span>List.fold xs ~init:true ~f:(fun acc y -&gt; <span data-count="6">i</span>f equal_kind (List.nth_ex<span data-count="6">n</span> y 0).kind (List.nth_ex<span data-count="6">n</span> x 0).kind
+                                                       then <span data-count="6">t</span>rue &amp;&amp; <span data-count="6">a</span>cc
+                                                       else <span data-count="0">f</span>alse ))
+             else <span data-count="2">t</span>rue
+(*check if a list of tiles have same kind*)
+let same_kind_list (t_list:tile list) : bool = 
+  <span data-count="12">i</span>f List.lengt<span data-count="12">h</span> t_list = 0 then <span data-count="0">t</span>rue
+  else <span data-count="12">(</span>
+  let cur = List.nth_exn t_list 0 in 
+  <span data-count="12">l</span>et cur_kind = cur.kind in 
+  List.fold ~init:(true) ~f:(fun acc x -&gt; <span data-count="36">i</span>f (equal_kind cur_kind x.kind) then <span data-count="36">(</span>acc &amp;&amp; <span data-count="36">t</span>rue)
+                                        else <span data-count="0">f</span>alse
+    ) t_list
+  )
+(*check if the three tiles from a shun, such as 1 2 3 Man*)
+let check_shun (first:tile) (second:tile) (third:tile):bool = 
+  <span data-count="1">l</span>et adj small big = 
+    <span data-count="2">i</span>f small.number = big.number -1 then <span data-count="2">t</span>rue
+    else <span data-count="0">f</span>alse in
+  (*if (same_kind first second third)*)  (ad<span data-count="1">j</span> first second) &amp;&amp; <span data-count="1">(</span>adj second third)
+
+(*check if two tiles are equal in kind and number*)
+let check_equal (first:tile) (second:tile):bool = 
+  <span data-count="48155">i</span>f ((equal_kin<span data-count="48155">d</span> first.kind second.kind) &amp;&amp; <span data-count="37752">(</span>first.number = second.number)) then <span data-count="24349">t</span>rue
+  else <span data-count="23806">f</span>alse
+
+
+(*note this function requires all three tiles to be same kind*)
+let sort_same_kind (l:tile list):(tile list) = 
+  <span data-count="468183">L</span>ist.sort l ~compare:(fun x y -&gt; <span data-count="241359">i</span>f x.number &lt; y.number then <span data-count="70386">-</span>1
+                        else <span data-count="170973">i</span>f x.number = y.number then <span data-count="137760">0</span>
+                        else <span data-count="33213">1</span>) 
+
+(*find the specificied kind of tiles in the hand*)
+let find_kind (l:tile list) (t:kind):(tile list) = 
+  <span data-count="606127">L</span>ist.filter ~f:(fun x -&gt; <span data-count="1918341">i</span>f (equal_kind x.kind t) then <span data-count="668584">t</span>rue
+                        else <span data-count="1249757">f</span>alse) l 
+
+(*check if a list of tiles are equal. Facilitate yiipeikou*)
+let check_equal_list (first:tile list) (second:tile list): bool =
+  <span data-count="6">i</span>f (not (same_kind_lis<span data-count="6">t</span> first<span data-count="0">)</span> || not (same_kind_lis<span data-count="6">t</span> second<span data-count="0">)</span>) then <span data-count="0">f</span>alse
+  else <span data-count="6">(</span>let sorted_first = sort_same_kind first in
+        <span data-count="6">l</span>et sorted_second = sort_same_kind second in
+        <span data-count="6">i</span>f not ((List.lengt<span data-count="6">h</span> sorted_first) = (List.lengt<span data-count="6">h</span> sorted_second)) then <span data-count="0">f</span>alse
+        else <span data-count="6">(</span>List.foldi sorted_first ~init:(true)
+                ~f:(fun i acc x -&gt; <span data-count="18">i</span>f check_equal x (List.nth_ex<span data-count="18">n</span> sorted_second i) then <span data-count="18">t</span>rue &amp;&amp; <span data-count="18">a</span>cc
+                else <span data-count="0">f</span>alse)))
+
+(*find a specific kind of tiles of hand. Then sort it from smallest to largest*)
+let sort_hand_onekind (l:tile list) (t:kind):(tile list) = 
+  <span data-count="424315">l</span>et kind_list = find_kind l t in 
+  <span data-count="424315">s</span>ort_same_kind kind_list
+
+let sort_hand (l:tile list):(tile list) = 
+  <span data-count="84863">l</span>et sorted_man_list = sort_hand_onekind l Man in 
+  <span data-count="84863">l</span>et sorted_pin_list = sort_hand_onekind l Pin in 
+  <span data-count="84863">l</span>et sorted_suo_list = sort_hand_onekind l Suo in
+  <span data-count="84863">l</span>et sorted_dragon_list = sort_hand_onekind l Dragon in 
+  <span data-count="84863">l</span>et sorted_wind_list = sort_hand_onekind l Wind in 
+  <span data-count="84863">L</span>ist.concat [sorted_man_list;sorted_pin_list;sorted_suo_list;sorted_dragon_list;sorted_wind_list]
+
+let get_all_non_fulu (t_list: tile list) =
+  <span data-count="41">l</span>et not_sorted = List.fold t_list ~init:[] ~f:(fun acc x-&gt; <span data-count="555">i</span>f not(x.fulu) then <span data-count="450">a</span>cc@[x] 
+                                     else <span data-count="105">a</span>cc) in
+  <span data-count="41">s</span>ort_hand not_sorted
+
+let get_all_fulu (t_list: tile list) = 
+  <span data-count="0">l</span>et not_sorted = List.fold t_list ~init:[] ~f:(fun acc x -&gt; <span data-count="0">i</span>f x.fulu then <span data-count="0">a</span>cc@[x]
+                                                       else <span data-count="0">a</span>cc) in 
+  <span data-count="0">s</span>ort_hand not_sorted
+
+
+(*default sort the hand once we add a tile to hand, hand is always sorted to the player*)
+let sort_hand_add_tile (l:tile list) (to_set:tile) :tile list = 
+  <span data-count="35">l</span>et added_list = to_set::l in 
+  sort_hand added_list 
+
+let have_tile (l:tile list) (to_check_kind:kind) (to_check_num:int) : bool = 
+  <span data-count="1">L</span>ist.fold l ~init:false ~f:(fun acc x -&gt; <span data-count="3">i</span>f equal_kin<span data-count="3">d</span> x.kind to_check_kind &amp;&amp;
+                                           <span data-count="3">x</span>.number = to_check_num then <span data-count="1">t</span>rue 
+                                           else <span data-count="2">a</span>c<span data-count="2">c</span> || fals<span data-count="0">e</span> )
+
+(*given a tile, delete all tiles with the same property*)
+let delete_all_tile (l:tile list) (to_del:tile): tile list = 
+  <span data-count="1">L</span>ist.filter ~f:(fun x-&gt; <span data-count="5">i</span>f (x.number = to_del.number) &amp;&amp; (<span data-count="2">e</span>qual_kin<span data-count="2">d</span> x.kind to_del.kind) then <span data-count="2">f</span>alse
+                       else <span data-count="3">t</span>rue) l
+
+(*delete only one tile of the same one inputted*)
+let rec delete_one_tile (l:tile list) (to_del:tile) (acc:tile list): tile list = 
+  <span data-count="197901">m</span>atch l with
+    | <span data-count="0">[</span>] -&gt; sort_hand acc
+    | <span data-count="197901">e</span>le::ele_list -&gt; if (equal_kin<span data-count="197901">d</span> ele.kind to_del.kind) &amp;&amp; <span data-count="118428">(</span>ele.number = to_del.number) &amp;&amp; <span data-count="84781">n</span>ot (ele.fulu)
+                       then 
+                         <span data-count="84781">s</span>ort_hand (acc@ele_list)
+                       else <span data-count="113120">d</span>elete_one_til<span data-count="113120">e</span> ele_list to_del acc@[ele]
+
+
+
+let rec delete_list_of_tile (l:tile list) (to_del:tile list): tile list = 
+  <span data-count="112604">m</span>atch to_del with
+  | <span data-count="27825">[</span>] -&gt; l
+  | <span data-count="84779">x</span>::xs -&gt; let new_l = delete_one_tile l x [] in 
+             <span data-count="84779">d</span>elete_list_of_tile new_l xs
+
+(* for shun, there are three possibilities. Either the input tile is the tile with lowest number of shun, such as it is 1 in the 1-2-3 shun, or it is in the middle of shun such as 2 in the 1-2-3 shun,or it is at last of shun. Deal with these cases seperately and append them all together.*)
+let get_low_shun (l:tile list) (to_set:tile) (first_diff:int) (sec_diff:int) : tile list option = 
+  <span data-count="181734">l</span>et same_kind = find_kind l to_set.kind in
+  <span data-count="181734">l</span>et one_higher_list = List.filter ~f:(fun x -&gt; 
+                                              <span data-count="427746">i</span>f (x.number = (to_set.number + first_diff)) then <span data-count="18213">t</span>rue
+                                              else <span data-count="409533">f</span>alse) same_kind in
+  <span data-count="181734">l</span>et two_higher_list = List.filter ~f:(fun x -&gt; <span data-count="427746">i</span>f (x.number = (to_set.number + sec_diff)) then <span data-count="18215">t</span>rue
+                                              else <span data-count="409531">f</span>alse) same_kind in
+  <span data-count="181734">i</span>f (List.lengt<span data-count="181734">h</span> one_higher_list &gt;= 1) &amp;&amp; <span data-count="15401">(</span>List.lengt<span data-count="15401">h</span> two_higher_list &gt;=1) then 
+    <span data-count="9079">S</span>ome [to_set;List.nth_ex<span data-count="9079">n</span> one_higher_list 0;List.nth_ex<span data-count="9079">n</span> two_higher_list 0]
+  else <span data-count="172655">N</span>one
+
+let get_shun_from_option( opt_list : tile list option) : tile list = 
+  <span data-count="357020">m</span>atch opt_list with 
+  | <span data-count="329189">N</span>one -&gt; []
+  | <span data-count="27831">S</span>ome l -&gt; l
+
+let get_all_shun (l:tile list) (to_set:tile): tile list list option= 
+  <span data-count="60578">l</span>et get_when_is_low = get_shun_from_option( get_low_shu<span data-count="60578">n</span> l to_set 1 2) in
+  <span data-count="60578">l</span>et get_when_is_mid = get_shun_from_option( get_low_shu<span data-count="60578">n</span> l to_set (-1) 1 )in
+  <span data-count="60578">l</span>et get_when_is_high = get_shun_from_option( get_low_shu<span data-count="60578">n</span> l to_set (-2) (-1) )in
+  <span data-count="60578">S</span>ome [get_when_is_low;get_when_is_mid;get_when_is_high]
+(*  match get_when_is_low with
+  | None -&gt; (match get_when_is_mid with
+             | None -&gt; (match get_when_is_high with
+                        | None -&gt; None
+                        | Some l3 -&gt; Some [get_when_is_low;get_when_is_mid;get_when_is_high]
+                       )
+             | Some l2 -&gt; Some [get_when_is_low;get_when_is_mid;get_when_is_high]
+            )
+  | Some l -&gt; Some [get_when_is_low;get_when_is_mid;get_when_is_high]
+*)
+
+
+  (*if (List.length get_when_is_low &gt;= 1) || (List.length get_when_is_mid &gt;=1) || (List.length get_when_is_high)&gt;= 1 then
+    Some [get_when_is_low;get_when_is_mid;get_when_is_high]
+  else None*)
+  
+let get_pong (l:tile list) (to_set:tile): tile list option= 
+  <span data-count="87644">l</span>et same_tile_list = List.filter ~f:(fun x -&gt; <span data-count="362638">i</span>f (equal_kin<span data-count="362638">d</span> x.kind to_set.kind) &amp;&amp; <span data-count="219644">(</span>x.number = to_set.number) then <span data-count="154184">t</span>rue
+                                             else <span data-count="208454">f</span>alse) l in
+  <span data-count="87644">i</span>f List.lengt<span data-count="87644">h</span> same_tile_list &gt;= 3 then <span data-count="17449">S</span>ome [to_set;to_set;to_set]
+  else <span data-count="70195">N</span>one
+
+let get_kan (l:tile list) (to_set:tile): tile list option=
+  <span data-count="87644">l</span>et same_tile_list = List.filter ~f:(fun x -&gt; <span data-count="362638">i</span>f (equal_kin<span data-count="362638">d</span> x.kind to_set.kind) &amp;&amp; <span data-count="219644">(</span>x.number = to_set.number) then <span data-count="154185">t</span>rue
+                                             else <span data-count="208453">f</span>alse) l in
+  <span data-count="87644">i</span>f List.lengt<span data-count="87644">h</span> same_tile_list &gt;= 4 then <span data-count="1305">S</span>ome [to_set;to_set;to_set;to_set]
+  else <span data-count="86339">N</span>one
+
+let check_chii (l:tile list) (to_set:tile): bool =
+  <span data-count="0">m</span>atch get_all_shun l to_set with
+  | <span data-count="0">S</span>ome _ -&gt; true
+  | <span data-count="0">N</span>one -&gt; false
+
+let get_list_shun_from_option (opt_list:tile list list option) =
+  <span data-count="60577">m</span>atch opt_list with
+  | <span data-count="0">N</span>one -&gt; []
+  | <span data-count="60577">S</span>ome l -&gt; l
+
+let remove_empty_lists (l:tile list list) = 
+  <span data-count="87643">L</span>ist.fold l ~init:[] ~f:(fun acc x -&gt; <span data-count="357017">i</span>f not (List.is_empt<span data-count="357017">y</span> x) then <span data-count="27828">x</span>::acc
+    else <span data-count="329189">a</span>cc)
+
+
+let rec compare_tile_list (first:tile list) (second:tile list) = 
+  <span data-count="36496">i</span>f not(List.lengt<span data-count="36496">h</span> first = List.lengt<span data-count="36496">h</span> second) then <span data-count="0">f</span>ailwith("cant compare")
+  else <span data-count="36496">(</span>match List.length first with 
+        | <span data-count="8509">0</span> -&gt; 0 
+        | <span data-count="27987">_</span> -&gt; let fst_first = List.nth_exn first 0 in 
+               <span data-count="27987">l</span>et fst_second = List.nth_exn second 0 in 
+               <span data-count="27987">i</span>f fst_first.number &gt; fst_second.number then <span data-count="1005">1</span>
+               else <span data-count="26982">i</span>f fst_first.number &lt; fst_second.number then <span data-count="1455">-</span>1 
+               else <span data-count="25527">(</span> compare_tile_list
+                        (List.su<span data-count="25527">b</span> first ~pos:1 ~len:(List.lengt<span data-count="25527">h</span> first -1)) 
+                        (List.su<span data-count="25527">b</span> second ~pos:1 ~len:(List.lengt<span data-count="25527">h</span> second -1))
+                    ))
+
+let sort_ke_shun (l:tile list list) = 
+  <span data-count="87643">L</span>ist.map l ~f:(fun l -&gt; <span data-count="27828">s</span>ort_same_kind l)
+
+let find_all_ke_shun(l:tile list) (to_set:tile):(tile list list) = 
+  <span data-count="87643">m</span>atch to_set.kind with
+    | <span data-count="23335">D</span>ragon -&gt; let have_empty = [get_shun_from_optio<span data-count="23335">n</span> (get_pon<span data-count="23335">g</span> l to_set)
+                                 ;get_shun_from_optio<span data-count="23335">n</span> (get_ka<span data-count="23335">n</span> l to_set)] in
+                let no_empty = remove_empty_lists have_empty in
+                <span data-count="23335">s</span>ort_ke_shun no_empty
+    | <span data-count="3731">W</span>ind -&gt; let have_empty = [get_shun_from_optio<span data-count="3731">n</span>(get_pon<span data-count="3731">g</span> l to_set)
+                               ; get_shun_from_optio<span data-count="3731">n</span> (get_ka<span data-count="3731">n</span> l to_set)] in
+              let no_empty = remove_empty_lists have_empty in
+              <span data-count="3731">s</span>ort_ke_shun no_empty
+    | <span data-count="60577">_</span> -&gt; let have_empty =  (get_shun_from_optio<span data-count="60577">n</span> (get_pon<span data-count="60577">g</span> l to_set))
+             ::get_list_shun_from_optio<span data-count="60577">n</span> (get_all_shu<span data-count="60577">n</span> l to_set) in
+           
+             let have_empty2 = (get_shun_from_optio<span data-count="60577">n</span> (get_ka<span data-count="60577">n</span> l to_set))
+                                 ::have_empty in
+             let no_empty = remove_empty_lists have_empty2 in
+             <span data-count="60577">s</span>ort_ke_shun no_empty
+    
+
+let generate_man_pin_suo (k:kind):tile list =
+  <span data-count="27">l</span>et pai_list = ref [] in
+  let one_nine_list = [1;2;3;4;5;6;7;8;9] in
+  List.iter one_nine_list ~f:(fun x -&gt; <span data-count="243">l</span>et constructed = construct_fake k x in
+                                       <span data-count="243">p</span>ai_list := constructed::(!pai_list););
+  <span data-count="27">!</span>pai_list
+
+let generate_wind : tile list = 
+  let tong = construct_fake Wind 1 in
+  <span data-count="9">l</span>et nan = construct_fake Wind 2 in
+  <span data-count="9">l</span>et xia = construct_fake Wind 3 in
+  <span data-count="9">l</span>et pei = construct_fake Wind 4 in 
+  <span data-count="9">[</span>tong;nan;xia;pei]
+
+let generate_dragon : tile list = 
+  let bai = construct_fake Dragon 1 in 
+  <span data-count="9">l</span>et chong = construct_fake Dragon 2 in 
+  <span data-count="9">l</span>et fa = construct_fake Dragon 3 in
+  <span data-count="9">[</span>bai;chong;fa]
+
+let generate_all_yao : tile list = 
+  let man_1 = construct_fake Man 1 in
+  <span data-count="9">l</span>et man_9 = construct_fake Man 9 in 
+  <span data-count="9">l</span>et pin_1 = construct_fake Pin 1 in 
+  <span data-count="9">l</span>et pin_9 = construct_fake Pin 9 in 
+  <span data-count="9">l</span>et suo_1 = construct_fake Suo 1 in 
+  <span data-count="9">l</span>et suo_9 = construct_fake Suo 9 in
+  <span data-count="9">l</span>et wind_list = generate_wind in
+  let dragon_list = generate_dragon in 
+  ([man_1;man_9;pin_1;pin_9;suo_1;suo_9] @ wind_list) @dragon_list 
+
+let generate_all_pai : tile list = 
+  let man_list = generate_man_pin_suo Man in 
+  <span data-count="9">l</span>et pin_list = generate_man_pin_suo Pin in 
+  <span data-count="9">l</span>et suo_list = generate_man_pin_suo Suo in 
+  <span data-count="9">l</span>et wind_list = generate_wind in
+  let dragon_list = generate_dragon in 
+  man_list @ pin_list @suo_list @ wind_list @ dragon_lis<span data-count="18">t</span>
+
+</code></pre>
+      </div>
+    </div>
+    <script src="../coverage.js"></script>
+  </body>
+</html>
